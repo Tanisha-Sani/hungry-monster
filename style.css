@@ -38,16 +38,16 @@ body{
 .search-input:focus, .search-button:focus{
     outline: none;
 }
-.single-food-items {
+.meal-items-chart{
     background: white;
-    color: white;
+    color: black;
     border-radius: 6px;
     overflow: hidden;
     cursor: pointer;
     box-shadow: 1px -1px 8px black;
 }
 
-.food-items-wrappper {
+.decorated-meal-chart {
     display: grid;
     grid-template-columns: repeat(4,250px);
     grid-template-rows: repeat(2,250px);

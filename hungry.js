@@ -1,5 +1,5 @@
 // Random Food For At The beginning Function
-let foodList = document.getElementsByClassName("single-food-items");
+let foodList = document.getElementsByClassName("meal-items-chart");
 for (let i = 0; i < foodList.length; i++) {
     fetch('https://www.themealdb.com/api/json/v1/1/random.php')
         .then(res => res.json())
@@ -26,8 +26,8 @@ for (let i = 0; i < foodList.length; i++) {
 
 // Clicked And Show Food Ingredient Function
 let ingredient = (event) => {
-    let targetFood = this.event.target;
-    let foodId = targetFood.attributes[1].value;
+    let eventFood = this.event.target;
+    let foodId = eventFood.attributes[1].value;
     fetch('https://www.themealdb.com/api/json/v1/1/lookup.php?i=' + foodId)
         .then(res => res.json())
         .then(data => {
@@ -40,11 +40,10 @@ let ingredient = (event) => {
             document.getElementById("ingredientImage").src = strMealThumb;
             document.getElementById("foodIngredientTitle").innerText = strMeal;
 
-            //Icon
             let icon = `
              <i class="fas fa-check-square food-icon"></i>
              `;
-            //Adding Icon and Ingredients
+
             document.getElementById("strIngredient1").innerHTML = icon + strIngredient1;
             document.getElementById("strIngredient2").innerHTML = icon + strIngredient2;
             document.getElementById("strIngredient3").innerHTML = icon + strIngredient3;
@@ -53,13 +52,13 @@ let ingredient = (event) => {
             document.getElementById("strIngredient6").innerHTML = icon + strIngredient6;
             document.getElementById("strIngredient7").innerHTML = icon + strIngredient7;
 
-            //Search Input and Button Display none
-            document.getElementById("foodSearchContent").style.display = 'none'
+            
+            document.getElementById("foodSearchContent").style.display = "none";
         })
 }
 
 
-// Main Function For Searched Food By User And It's Also Change Other's Food By Using Inputed Values Letter
+// starting foodSearchFunction 
 const foodSearchfunction = () => {
     let foodInput = document.getElementById("foodInput").value;
     if (foodInput.length == 0) {
@@ -72,17 +71,16 @@ const foodSearchfunction = () => {
             let { meals } = data;
             let [mealList] = meals;
             let { idMeal, strMeal, strMealThumb } = mealList;
-            //Calling That Function That Will Give The Result Of Searched By User
+         
             searchFoodUpdate(0, idMeal, strMeal, strMealThumb);
-            document.querySelector(".food-items-wrappper").style.gridTemplateRows = "repeat(3,250px)";
-            document.querySelector(".first-food-item").style.display = "block"
+            document.querySelector(".decorated-meal-chart").style.gridTemplateRows = "repeat(3,250px)";
+            document.querySelector(".first-food-item").style.display = "block";
         })
         .catch(() => {
             alert("Please Search Valid Meal Name");
             document.getElementById("foodInput").value = "";
         })
 
-    // To Search Food By Letter Using substr(String Method)
     let firstLetter = foodInput.substr(0, 1);
     let secondLetter = foodInput.substr(1, 1);
     let thirdLetter = foodInput.substr(2, 1);
@@ -91,7 +89,7 @@ const foodSearchfunction = () => {
     searchFoodLetter(1, 2, firstLetter);
     searchFoodLetter(3, 4, secondLetter);
 
-    // To Make last Three Food Random By Click
+  
     for (let i = 5; i < foodList.length; i++) {
         fetch('https://www.themealdb.com/api/json/v1/1/random.php')
             .then(res => res.json())
@@ -107,7 +105,6 @@ const foodSearchfunction = () => {
 }
 
 
-// Search Food by Letter Function
 let searchFoodLetter = (num1, num2 = 7, letter) => {
     fetch('https://www.themealdb.com/api/json/v1/1/search.php?f=' + letter)
         .then(res => res.json())
@@ -120,7 +117,7 @@ let searchFoodLetter = (num1, num2 = 7, letter) => {
 }
 
 
-// Searched Food Update and Ingredient Function
+
 let searchFoodUpdate = (i, idMeal, strMeal, strMealThumb) => {
 
     let foodImage = document.querySelectorAll('.food-image img');
@@ -137,16 +134,16 @@ let searchFoodUpdate = (i, idMeal, strMeal, strMealThumb) => {
 }
 
 
-// Close Function to Close Meal Ingredient Cart 
+
 let closeIngredientFunction = () => {
     document.getElementById("ingredientCart").style.display = "none";
     document.getElementById("foodItemsId").style.display = "grid";
-    document.getElementById("foodSearchContent").style.display = 'block'
+    document.getElementById("foodSearchContent").style.display = "block";
 }
 
 
-// Close Function to Close Result Meal
+
 let closeResultMealFunction = () => {
     document.querySelector(".first-food-item").style.display = "none";
-    document.querySelector(".food-items-wrappper").style.gridTemplateRows = "repeat(2,250px)";
+    document.querySelector(".decorated-meal-chart").style.gridTemplateRows = "repeat(2,250px)";
 }
