@@ -1,5 +1,6 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
+    background-color: orange;
 }
 .container{
     margin: 20px 60px;
@@ -21,7 +22,7 @@ body{
 
 .search-button {
     border: none;
-    background: orange;
+    background: rgb(34, 34, 121);
     color: white;
     font-size: 20px;
     height: 46px;
