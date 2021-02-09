@@ -1,0 +1,152 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    margin: 20px 60px;
+}
+.container input{
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    width: 390px;
+    height: 40px;
+    cursor: pointer;
+}
+.meal-chart {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+}
+
+.search-button {
+    border: none;
+    background: orange;
+    color: white;
+    font-size: 20px;
+    height: 46px;
+    width: 100px;
+    cursor: pointer;
+}
+
+.header-content {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+    overflow: hidden;
+}
+.search-input:focus, .search-button:focus{
+    outline: none;
+}
+.single-food-items {
+    background: white;
+    color: black;
+    border-radius: 6px;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 1px -1px 8px black;
+}
+
+.food-items-wrappper {
+    display: grid;
+    grid-template-columns: repeat(4,250px);
+    grid-template-rows: repeat(2,250px);
+    grid-row-gap: 70px;
+    grid-column-gap: 40px;
+    justify-content: center;
+}
+
+.food-image {
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+}
+
+.food-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.food-name {
+    text-align: center;
+    height: 20%;
+}
+
+.food-name p {
+    width: 234px;
+    font-weight: 600;
+    font-size: 18px;
+    margin: auto;
+    padding: 13px;
+    line-height: 30px;
+}
+
+#ingredientCart {
+    width: 445px;
+    height: 570px;
+    margin: auto;
+    background: white;
+    display: none;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-top: -100px;
+    color: black;
+}
+
+.ingredient-image-div {
+    width: 100%;
+    height: 300px;
+    position: relative;
+}
+
+#ingredientImage {
+    width: 100%;
+    height: 100%;
+}
+#foodIngredientTitle {
+    font-size: 22px;
+    margin-left: 15px;
+}
+.ingredient-highlight-text{
+    font-size: 17px;
+    margin-left: 15px;
+}
+#ingredientList {
+    list-style: none;
+    margin-left: -25px;
+}
+.food-icon{
+    color: #2accbb;
+}
+#ingredientList li {
+    color: white;
+}
+
+.ingredient-list-div {
+    border-top: 3px solid orange;
+}
+.cross-button {
+    color: black;
+    font-size: 40px;
+    position: absolute;
+    right: 0px;
+    background: red;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.cross-button:hover{
+    color: red;
+    background-color: black;
+}
+.first-food-item {
+    display: none;
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    width: 350px;
+    height: 334px;
+    margin: -45px auto;
+    position: relative;
+}
