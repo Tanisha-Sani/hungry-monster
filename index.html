@@ -20,110 +20,123 @@
           </div>
       </div> 
   </header>
-     <!-- starting main section -->
-     <main>
-        <section id="foodItems">
-            <div class="container">
-                <!-- Random Meals And Searched Meal Result -->
-                <div onclick="ingredient()" id="foodItemsId" class="food-items-wrappper">
-                    <!-- Searched Meal by Meal Name-->
-                    <div class="single-food-items first-food-item">
-                        <div class="food-image">
-                        <i onclick="closeResultMealFunction()" class="fas fa-times-circle cross-button"></i>
-                            <img id="singleFoodImg" class="">
-                        </div>
-                        <div class="food-name">
-                            <p id="singleFoodName" class=""></p>
-                        </div>
+  <!-- <header>
+    <div class="container">
+        <div class="header-wrapper">
+            <div id="foodSearchContent" class="header-content">
+                <input id="foodInput" class="search-input" type="search" placeholder="Search For Meal">
+                <button id="foodSearch" onclick="foodSearchfunction()" class="search-button">Search</button>
+            </div>
+        </div>
+    </div>
+
+</header> -->
+
+<!-- Main -->
+
+<main>
+    <section id="foodItems">
+        <div class="container">
+            <!-- Random Meals And Searched Meal Result -->
+            <div onclick="ingredient()" id="foodItemsId" class="food-items-wrappper">
+                <!-- Searched Meal by Meal Name-->
+                <div class="single-food-items first-food-item">
+                    <div class="food-image">
+                    <i onclick="closeResultMealFunction()" class="fas fa-times-circle cross-button"></i>
+                        <img id="singleFoodImg" class="">
                     </div>
-                    <!-- Random Meals and Searched Meals by Letter -->
-                    <div class="single-food-items">
-                        <div class="food-image">
-                            <img id="singleFoodImg" class="">
-                        </div>
-                        <div class="food-name">
-                            <p id="singleFoodName" class=""></p>
-                        </div>
-                    </div>
-                    <div class="single-food-items">
-                        <div class="food-image">
-                            <img id="singleFoodImg" class="">
-                        </div>
-                        <div class="food-name">
-                            <p id="singleFoodName" class=""></p>
-                        </div>
-                    </div>
-                    <div class="single-food-items">
-                        <div class="food-image">
-                            <img id="singleFoodImg" class="">
-                        </div>
-                        <div class="food-name">
-                            <p id="singleFoodName" class=""></p>
-                        </div>
-                    </div>
-                    <div class="single-food-items">
-                        <div class="food-image">
-                            <img id="singleFoodImg" class="">
-                        </div>
-                        <div class="food-name">
-                            <p id="singleFoodName" class=""></p>
-                        </div>
-                    </div>
-                    <div class="single-food-items">
-                        <div class="food-image">
-                            <img id="singleFoodImg" class="">
-                        </div>
-                        <div class="food-name">
-                            <p id="singleFoodName" class=""></p>
-                        </div>
-                    </div>
-                    <div class="single-food-items">
-                        <div class="food-image">
-                            <img id="singleFoodImg" class="">
-                        </div>
-                        <div class="food-name">
-                            <p id="singleFoodName" class=""></p>
-                        </div>
-                    </div>
-                    <div class="single-food-items">
-                        <div class="food-image">
-                            <img id="singleFoodImg" class="">
-                        </div>
-                        <div class="food-name">
-                            <p id="singleFoodName" class=""></p>
-                        </div>
-                    </div>
-                    <div class="single-food-items">
-                        <div class="food-image">
-                            <img id="singleFoodImg" class="">
-                        </div>
-                        <div class="food-name">
-                            <p id="singleFoodName" class=""></p>
-                        </div>
+                    <div class="food-name">
+                        <p id="singleFoodName" class=""></p>
                     </div>
                 </div>
-                <!-- Ingredient Part -->
-                <div id="ingredientCart">
-                    <div class="ingredient-image-div">
-                        <i onclick="closeIngredientFunction()" class="fas fa-times-circle cross-button"></i>
-                        <img id="ingredientImage" src="">
+                <!-- Random Meals and Searched Meals by Letter -->
+                <div class="single-food-items">
+                    <div class="food-image">
+                        <img id="singleFoodImg" class="">
                     </div>
-                    <div class="ingredient-list-div">
-                        <h3 id="foodIngredientTitle"></h3>
-                        <h5 class="ingredient-highlight-text">Ingredient</h5>
-                        <ul id="ingredientList">
-                            <li id="strIngredient1"></li>
-                            <li id="strIngredient2"></li>
-                            <li id="strIngredient3"></li>
-                            <li id="strIngredient4"></li>
-                            <li id="strIngredient5"></li>
-                            <li id="strIngredient6"></li>
-                            <li id="strIngredient7"></li>
-                        </ul>
+                    <div class="food-name">
+                        <p id="singleFoodName" class=""></p>
+                    </div>
+                </div>
+                <div class="single-food-items">
+                    <div class="food-image">
+                        <img id="singleFoodImg" class="">
+                    </div>
+                    <div class="food-name">
+                        <p id="singleFoodName" class=""></p>
+                    </div>
+                </div>
+                <div class="single-food-items">
+                    <div class="food-image">
+                        <img id="singleFoodImg" class="">
+                    </div>
+                    <div class="food-name">
+                        <p id="singleFoodName" class=""></p>
+                    </div>
+                </div>
+                <div class="single-food-items">
+                    <div class="food-image">
+                        <img id="singleFoodImg" class="">
+                    </div>
+                    <div class="food-name">
+                        <p id="singleFoodName" class=""></p>
+                    </div>
+                </div>
+                <div class="single-food-items">
+                    <div class="food-image">
+                        <img id="singleFoodImg" class="">
+                    </div>
+                    <div class="food-name">
+                        <p id="singleFoodName" class=""></p>
+                    </div>
+                </div>
+                <div class="single-food-items">
+                    <div class="food-image">
+                        <img id="singleFoodImg" class="">
+                    </div>
+                    <div class="food-name">
+                        <p id="singleFoodName" class=""></p>
+                    </div>
+                </div>
+                <div class="single-food-items">
+                    <div class="food-image">
+                        <img id="singleFoodImg" class="">
+                    </div>
+                    <div class="food-name">
+                        <p id="singleFoodName" class=""></p>
+                    </div>
+                </div>
+                <div class="single-food-items">
+                    <div class="food-image">
+                        <img id="singleFoodImg" class="">
+                    </div>
+                    <div class="food-name">
+                        <p id="singleFoodName" class=""></p>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+            <!-- Ingredient Part -->
+            <div id="ingredientCart">
+                <div class="ingredient-image-div">
+                    <i onclick="closeIngredientFunction()" class="fas fa-times-circle cross-button"></i>
+                    <img id="ingredientImage" src="">
+                </div>
+                <div class="ingredient-list-div">
+                    <h3 id="foodIngredientTitle"></h3>
+                    <h5 class="ingredient-highlight-text">Ingredient</h5>
+                    <ul id="ingredientList">
+                        <li id="strIngredient1"></li>
+                        <li id="strIngredient2"></li>
+                        <li id="strIngredient3"></li>
+                        <li id="strIngredient4"></li>
+                        <li id="strIngredient5"></li>
+                        <li id="strIngredient6"></li>
+                        <li id="strIngredient7"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
 </body>
 </html>
